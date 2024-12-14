@@ -1,0 +1,75 @@
+/* styles.css */
+.event-container {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    transition: background-color 0.3s ease; /* Плавный переход фона */
+    height: 100vh; /* Высота на весь экран */
+    display: flex; /* Используем flexbox для центрирования */
+    align-items: center; /* Вертикальное центрирование */
+    justify-content: center; /* Горизонтальное центрирование */
+  
+  
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px; /* Максимальная ширина для ПК */
+    width: 100%; /* Ширина 100% */
+    animation: fadeInEffect 0.5s ease; /* Анимация появления */
+  }
+  
+  .event-title {
+    font-size: 2.5rem; /* Размер заголовка */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Тень для заголовка */
+  }
+  
+  .event-description {
+    font-size: 1.2rem; /* Размер текста */
+    line-height: 1.5; /* Межстрочный интервал */
+    text-align: center; /* Центрирование текста */
+    margin-bottom: 20px; /* Отступ снизу */
+  }
+  
+  .image-wrapper {
+    width: 100%;
+    max-width: 600px; /* Максимальная ширина для изображения */
+    margin-bottom: 20px; /* Отступ снизу */
+    overflow: hidden; /* Скрытие переполнения */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для изображения */
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: auto; /* Автоматическая высота */
+    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+  }
+  
+  .image-wrapper img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+  }
+  
+  @keyframes fadeInEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .event-title {
+      font-size: 2rem; /* Уменьшение размера заголовка для мобильных */
+    }
+  
+    .event-description {
+      font-size: 1rem; /* Уменьшение размера текста для мобильных */
+    }
+  }
+  

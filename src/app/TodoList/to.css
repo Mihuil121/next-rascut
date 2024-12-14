@@ -1,0 +1,98 @@
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 10rem;
+    animation: fadeIn 0.5s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+.addButton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.addButton:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.todoList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.todoItem {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #444;
+    margin: 5px 0;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.todoItem.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.todoItem:hover {
+    transform: scale(1.02);
+}
+
+.deleteButton {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #ff4d4d;
+    transition: color 0.3s;
+}
+
+.deleteButton:hover {
+    color: #ff1a1a;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

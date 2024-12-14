@@ -1,0 +1,81 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Начальная прозрачность */
+        transform: translateY(20px); /* Начальное смещение вниз */
+    }
+    100% {
+        opacity: 1; /* Конечная прозрачность */
+        transform: translateY(0); /* Конечное положение */
+    }
+}
+
+.instructionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    max-width: 600px; 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)); 
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); 
+    margin: auto; 
+    height: 100vh; 
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    animation: fadeIn 0.8s ease-out; /* Применяем анимацию */
+}
+
+.instructionTitle {
+    font-size: 2.8rem; 
+    margin-bottom: 20px;
+    color: #ffffff; 
+    text-align: center; /* Центрируем заголовок */
+    font-family: 'Arial', sans-serif; /* Изменяем шрифт */
+}
+
+.instructionText {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #ffffff; 
+    text-align: center; /* Центрируем текст */
+    line-height: 1.5; /* Увеличиваем межстрочный интервал */
+}
+
+.instructionSteps {
+    text-align: left; 
+    margin-bottom: 20px;
+    color: #ffffff; 
+    padding-left: 20px; /* Добавляем отступ слева */
+}
+
+.instructionSteps li {
+    margin: 15px 0; /* Отступы между пунктами списка */
+    position: relative; /* Для псевдоэлемента */
+    padding-left: 20px; /* Отступ для текста */
+}
+
+.instructionSteps li::marker {
+    color: #007bff; /* Цвет маркера списка */
+    font-weight: bold; /* Жирный маркер */
+}
+
+.arButton {
+    padding: 12px 24px;
+    font-size: 1.4rem; /* Размер текста кнопки */
+    color: #ffffff; /* Цвет текста кнопки */
+    background-color: #007bff; /* Цвет фона кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 8px; /* Закругленные углы */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s, transform 0.2s; /* Плавный переход цвета фона и эффекта нажатия */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень кнопки */
+}
+
+.arButton:hover {
+    background-color: #0056b3; /* Цвет фона кнопки при наведении */
+    transform: translateY(-2px); /* Эффект поднятия кнопки при наведении */
+}
+
+.arButton:active {
+    transform: translateY(0); /* Возвращаем кнопку на место при нажатии */
+}

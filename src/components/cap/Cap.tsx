@@ -16,35 +16,20 @@ const Cap: React.FC = () => {
     return (
         <div className="cap-bac">
             <div className="cap-home">
-                <Link href='./'>
+                <Link href='/'>
                     <p className={quando.className}><AiFillHome /> Главная</p>
                 </Link>
                 <Link href='./'>
                     <p className={quando.className}><SiCinema4D /> AR</p>
                 </Link>
-                <Link href='./'>
+                <Link href='/instructions'>
                     <p className={quando.className}><MdIntegrationInstructions /> Инструкция</p>
                 </Link>
-                <Link href='./'>
-                    <p className={quando.className}><BsJournalText /> прикол</p>
+                <Link href='../../TodoList'>
+                    <p className={quando.className}><BsJournalText /> Квесты</p>
                 </Link>
             </div>
-            <div className="cap-sing">
-                <div className="sing">
-                    <Link href='./'>
-                        <p className={quando.className}>
-                            Sing in
-                        </p>
-                    </Link>
-                </div>
-                <div className="log">
-                    <Link href='./'>
-                        <p className={quando.className}>
-                            Log in
-                        </p>
-                    </Link>
-                </div>
-            </div>
+            
         </div>
     )
 }

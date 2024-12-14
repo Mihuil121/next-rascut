@@ -1,17 +1,21 @@
-import React from 'react';
+'use client'
 import './homeBack.css';
 import { FaArrowRight } from "react-icons/fa";
 import Image from 'next/image';
-import photo1 from '../../../img/phone.jpeg'
-import { Montserrat } from 'next/font/google'
+import photo1 from '../../../img/phone.jpeg';
+import { Montserrat } from 'next/font/google';
 import { NextFont } from 'next/dist/compiled/@next/font';
 
 const textFont: NextFont = Montserrat({
     subsets: ['latin'],
     weight: "500"
-})
+});
 
-const HomeBack: React.FC = () => {
+interface HomeBackProps {
+    scrollToCardBlock: () => void;
+}
+
+const HomeBack: React.FC<HomeBackProps> = ({ scrollToCardBlock }) => {
     return (
         <div>
             <div className="home">
@@ -24,12 +28,11 @@ const HomeBack: React.FC = () => {
                         </div>
                         <div className="blok-but">
                             <div className="but">
-                                <button className={textFont.className}>
+                                <button className={textFont.className} onClick={scrollToCardBlock}>
                                     О проекте
                                 </button>
                                 <FaArrowRight className="arrow" style={{ marginTop: '0.2rem' }} />
                             </div>
-
                         </div>
                     </div>
                     <div className="card">
@@ -44,4 +47,5 @@ const HomeBack: React.FC = () => {
     );
 }
 
-export default HomeBack; 
+export default HomeBack;
+

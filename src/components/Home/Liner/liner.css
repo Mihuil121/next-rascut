@@ -1,0 +1,38 @@
+.top-L {
+    margin-top: 3rem;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.sob {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.marquee-container {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.ImgLiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.liner-image {
+    width: 10rem;
+    height: 7rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.liner-image:hover {
+    transform: scale(1.05);
+}
