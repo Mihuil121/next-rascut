@@ -1,0 +1,99 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: url('../../../img/Designer.jpeg');
+    background-size: cover;
+}
+
+.card img {
+    width: 20rem;
+    height: 33rem;
+    border-radius: 2rem;
+}
+
+.block-text {
+    font-size: 3.5rem;
+    width: 40rem;
+    margin-right: 2rem;
+    color: aliceblue;
+}
+
+.blok-but {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #00d6d6;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.blok-but button {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.blok-but:hover button {
+    transform: scale(1.05);
+}
+
+.blok-but:hover {
+    background-color: #00b3b3;
+}
+
+.but {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.but:hover .arrow {
+    transform: translateX(5px);
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.text {
+    animation: slideInLeft 1s forwards; 
+}
+
+.card {
+    animation: slideInRight 1s forwards; 
+}
