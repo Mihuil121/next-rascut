@@ -1,0 +1,231 @@
+@media(max-width:1116px) {
+  .block-text {
+    font-size: 2rem !important;
+    width: 40rem;
+    margin-right: 2rem;
+    color: aliceblue;
+  }
+
+  .card img {
+    width: 15rem !important;
+    height: 30rem !important;
+    border-radius: 2rem;
+  }
+
+  .cardMapContentP p {
+    font-size: 1.5rem !important;
+    margin: 0;
+  }
+
+  .cardMapContentP2 p {
+    font-size: 1rem !important;
+    margin: 0;
+  }
+}
+
+@media(max-width:942px) {
+  .block-text p {
+    font-size: 2rem !important;
+    width: 25rem;
+
+  }
+
+  .card img {
+    width: 15rem !important;
+    height: 30rem !important;
+    border-radius: 2rem;
+    margin-left: -10rem;
+  }
+
+  .cardBack {
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20rem;
+  }
+
+  .cardMapContentP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin: 2rem;
+  }
+}
+
+@media(max-width:800px) {
+  .cap-bac {
+    background-color: black;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center !important;
+    z-index: 1000;
+  }
+
+  .cap-home {
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    height: 5rem;
+    margin-left: 0rem !important;
+  }
+
+  .block-text p {
+    font-size: 1.5rem !important;
+    width: 20rem;
+  }
+
+  .blok-but {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #00d6d6;
+    height: 2rem !important;
+    width: 10rem !important;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-top: 1rem;
+  }
+
+  .blok-but button {
+    font-size: 1rem !important;
+  }
+
+  .card img {
+    width: 15rem !important;
+    height: 30rem !important;
+    border-radius: 2rem;
+    margin-left: -17rem !important;
+  }
+}
+
+@media(max-width:684px) {
+
+  .card img {
+    visibility: hidden;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .block-text p {
+    font-size: 2.5rem !important;
+    width: 100% !important;
+    margin-right: 0rem !important;
+    color: aliceblue;
+    text-align: center;
+  }
+
+  .cap-bac {
+    background-color: black;
+    /* Цвет фона */
+    position: fixed;
+    /* Фиксированное позиционирование */
+    bottom: 0;
+    /* Привязка к нижней части экрана */
+    display: flex;
+    /* Используем flexbox для размещения содержимого */
+    width: 100%;
+    /* Ширина 100% */
+    justify-content: space-between;
+    /* Распределение элементов по краям */
+    z-index: 1000;
+    /* Уровень наложения */
+    padding: 1rem;
+    /* Отступы для внутреннего содержимого (по желанию) */
+    color: white;
+    /* Цвет текста (по желанию) */
+  }
+
+  .contentCard {
+    margin-bottom: 40rem !important;
+  }
+}
+
+@media(max-width:528px) {
+  .text {
+    animation: slideInLeft 1s forwards;
+    width: 1rem !important;
+  }
+  .block-text p {
+    font-size: 1.5rem !important;
+    width: 50% !important;
+    margin-left: 11rem;
+  }
+  .contentCard {
+    margin-bottom: 40rem !important;
+    margin-top: 30rem !important;
+  }
+  .instructionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    max-width: 600px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    border-radius: 0rem !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    margin: auto;
+    height: 100vh;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8s ease-out;
+  }
+}
+
+@media(max-width:412px) {
+  .cap-bac {
+    background-color: black; /* Цвет фона */
+    position: fixed; /* Фиксированное позиционирование */
+    bottom: 0; /* Привязка к нижней части экрана */
+    display: flex; /* Используем flexbox для размещения содержимого */
+    width: 100%; /* Ширина 100% */
+    justify-content: space-between; /* Распределение элементов по краям */
+    z-index: 1000; /* Уровень наложения */
+    padding: 1rem; /* Отступы для внутреннего содержимого (по желанию) */
+    color: white; /* Цвет текста (по желанию) */
+}
+
+.cap-home p {
+  display: flex; /* Используем flexbox для иконок и текста */
+  align-items: center; /* Центрируем иконки по вертикали */
+}
+
+.cap-home p svg {
+  font-size: 2rem; /* Увеличиваем размер иконок */
+  margin-right: 0.5rem; /* Отступ между иконкой и текстом (если текст виден) */
+}
+
+
+.cap-home p span {
+    display: none; /* Скрываем текст */
+}
+.instructionTitle {
+  font-size: 2rem !important;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.instructionText {
+  font-size: 1.2rem !important;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.5;
+}
+.event-title {
+  font-size: 1.5rem !important;
+}
+}
