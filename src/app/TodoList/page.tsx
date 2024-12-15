@@ -1,16 +1,26 @@
-"use client";
-
+'use client'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { events, IEvent } from './a'; 
+import { IEvent, fetchEvents } from './a'; 
 import './to.css';
 
 const TodoList: React.FC = () => {
   const [todos, setTodos] = useState<IEvent[]>([]);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    const savedTodos = localStorage.getItem('todos');
-    setTodos(savedTodos ? JSON.parse(savedTodos) : events);
+    const loadEvents = async () => {
+      try {
+        const data: IEvent[] = await fetchEvents();
+        setTodos(data);
+      } catch (error) {
+        console.error('Ошибка при загрузке данных:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadEvents();
   }, []);
 
   const handleDelete = (index: number) => {
@@ -20,7 +30,7 @@ const TodoList: React.FC = () => {
   };
 
   const handleReset = () => {
-    setTodos(events);
+    setTodos([]); 
     localStorage.removeItem('todos');
   };
 
@@ -28,9 +38,13 @@ const TodoList: React.FC = () => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
+  if (loading) {
+    return <div>Загрузка...</div>; 
+  }
+
   return (
     <div className="container">
-      <h1>События</h1>
+      <h1>Квесты</h1>
 
       <button className="resetButton" onClick={handleReset}>
         Сбросить
@@ -38,17 +52,17 @@ const TodoList: React.FC = () => {
 
       <ul className="todoList">
         {todos.map((event, index) => (
-          <li key={index} className="todoItem fade-in">
-            <Link href={`./TodoList/${index}`}>
+          <Link key={event.id} href={`./TodoList/${event.id}`}>
+            <li className="todoItem fade-in">
               {event.title}
-            </Link>
-            <span 
-              onClick={() => handleDelete(index)} 
-              className="deleteButton"
-            >
-              ✖
-            </span>
-          </li>
+              <span 
+                onClick={() => handleDelete(index)} 
+                className="deleteButton"
+              >
+                ✖
+              </span>
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
