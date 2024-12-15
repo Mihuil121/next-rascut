@@ -6,10 +6,12 @@ import { events, IEvent } from './a';
 import './to.css';
 
 const TodoList: React.FC = () => {
-  const [todos, setTodos] = useState<IEvent[]>(() => {
+  const [todos, setTodos] = useState<IEvent[]>([]);
+
+  useEffect(() => {
     const savedTodos = localStorage.getItem('todos');
-    return savedTodos ? JSON.parse(savedTodos) : events;
-  });
+    setTodos(savedTodos ? JSON.parse(savedTodos) : events);
+  }, []);
 
   const handleDelete = (index: number) => {
     const updatedTodos = todos.filter((_, i) => i !== index);
