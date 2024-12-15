@@ -1,21 +1,38 @@
-// src/app/TodoList/page.tsx
-"use client"; // Убедитесь, что этот импорт присутствует
+"use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
-import { events, IEvent } from './a'; // Импортируйте массив событий
+import { useEffect, useState } from 'react';
+import { events, IEvent } from './a'; 
 import './to.css';
 
 const TodoList: React.FC = () => {
-  const [todos, setTodos] = useState<IEvent[]>(events); // Используйте массив событий
+  const [todos, setTodos] = useState<IEvent[]>(() => {
+    const savedTodos = localStorage.getItem('todos');
+    return savedTodos ? JSON.parse(savedTodos) : events;
+  });
 
   const handleDelete = (index: number) => {
-    setTodos(todos.filter((_, i) => i !== index)); // Удаление события по индексу
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    setTodos(updatedTodos);
+    localStorage.setItem('todos', JSON.stringify(updatedTodos));
   };
+
+  const handleReset = () => {
+    setTodos(events);
+    localStorage.removeItem('todos');
+  };
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className="container">
       <h1>События</h1>
+
+      <button className="resetButton" onClick={handleReset}>
+        Сбросить
+      </button>
 
       <ul className="todoList">
         {todos.map((event, index) => (
@@ -32,7 +49,6 @@ const TodoList: React.FC = () => {
           </li>
         ))}
       </ul>
-
     </div>
   );
 };

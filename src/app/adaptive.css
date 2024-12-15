@@ -156,15 +156,18 @@
     animation: slideInLeft 1s forwards;
     width: 1rem !important;
   }
+
   .block-text p {
     font-size: 1.5rem !important;
     width: 50% !important;
     margin-left: 11rem;
   }
+
   .contentCard {
     margin-bottom: 40rem !important;
     margin-top: 30rem !important;
   }
+
   .instructionContainer {
     display: flex;
     flex-direction: column;
@@ -185,47 +188,146 @@
 
 @media(max-width:412px) {
   .cap-bac {
-    background-color: black; /* Цвет фона */
-    position: fixed; /* Фиксированное позиционирование */
-    bottom: 0; /* Привязка к нижней части экрана */
-    display: flex; /* Используем flexbox для размещения содержимого */
-    width: 100%; /* Ширина 100% */
-    justify-content: space-between; /* Распределение элементов по краям */
-    z-index: 1000; /* Уровень наложения */
-    padding: 1rem; /* Отступы для внутреннего содержимого (по желанию) */
-    color: white; /* Цвет текста (по желанию) */
+    background-color: black;
+    /* Цвет фона */
+    position: fixed;
+    /* Фиксированное позиционирование */
+    bottom: 0;
+    /* Привязка к нижней части экрана */
+    display: flex;
+    /* Используем flexbox для размещения содержимого */
+    width: 100%;
+    /* Ширина 100% */
+    justify-content: space-between;
+    /* Распределение элементов по краям */
+    z-index: 1000;
+    /* Уровень наложения */
+    padding: 1rem;
+    /* Отступы для внутреннего содержимого (по желанию) */
+    color: white;
+    /* Цвет текста (по желанию) */
+  }
+
+  .cap-home p {
+    display: flex;
+    /* Используем flexbox для иконок и текста */
+    align-items: center;
+    /* Центрируем иконки по вертикали */
+  }
+
+  .cap-home p svg {
+    font-size: 2rem;
+    /* Увеличиваем размер иконок */
+    margin-right: 0.5rem;
+    /* Отступ между иконкой и текстом (если текст виден) */
+  }
+
+
+  .cap-home p span {
+    display: none;
+    /* Скрываем текст */
+  }
+
+  .instructionTitle {
+    font-size: 2rem !important;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .instructionText {
+    font-size: 1.2rem !important;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .event-title {
+    font-size: 1.5rem !important;
+  }
 }
 
-.cap-home p {
-  display: flex; /* Используем flexbox для иконок и текста */
-  align-items: center; /* Центрируем иконки по вертикали */
+@media (max-width:1173px) {
+  .Image-events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .event-container {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    width: 160% !important;
+    animation: fadeInEffect 0.5s ease;
+  }
 }
 
-.cap-home p svg {
-  font-size: 2rem; /* Увеличиваем размер иконок */
-  margin-right: 0.5rem; /* Отступ между иконкой и текстом (если текст виден) */
+@media (max-width:837px) {
+  .event-container {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    width: 371% !important;
+    animation: fadeInEffect 0.5s ease;
+  }
 }
 
 
-.cap-home p span {
-    display: none; /* Скрываем текст */
-}
-.instructionTitle {
-  font-size: 2rem !important;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-}
+@media (max-width:765px) {
+  .Image-events {
+    display: flex;
+    flex-direction: column;
 
-.instructionText {
-  font-size: 1.2rem !important;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 1.5;
-}
-.event-title {
-  font-size: 1.5rem !important;
-}
+  }
+
+  .Image-events-i {
+    width: 70%;
+
+    margin-bottom: 10rem;
+   
+  }
+
+  .Image-events-i img {
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .event-container {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    height: 50vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    width: 100% !important;
+    animation: fadeInEffect 0.5s ease;
+  }
+
 }

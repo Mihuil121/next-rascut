@@ -15,22 +15,22 @@ const quando: NextFont = Roboto({
 const Cap: React.FC = () => {
     return (
         <div className="cap-bac">
-        <div className="cap-home">
-            <Link href='/'>
-                <p className={quando.className}><AiFillHome /><span>Главная</span></p>
-            </Link>
-            <Link href='./'>
-                <p className={quando.className}><SiCinema4D /><span>AR</span></p>
-            </Link>
-            <Link href='/instructions'>
-                <p className={quando.className}><MdIntegrationInstructions /><span>Инструкция</span></p>
-            </Link>
-            <Link href='../../TodoList'>
-                <p className={quando.className}><BsJournalText /><span>Квесты</span></p>
-            </Link>
+            <div className="cap-home">
+                <Link href='/'>
+                    <p className={quando.className}><AiFillHome /><span>Главная</span></p>
+                </Link>
+                <Link href='./'>
+                    <p className={quando.className}><SiCinema4D /><span>AR</span></p>
+                </Link>
+                <Link href='/instructions'>
+                    <p className={quando.className}><MdIntegrationInstructions /><span>Инструкция</span></p>
+                </Link>
+                <Link href='../../TodoList'>
+                    <p className={quando.className}><BsJournalText /><span>Квесты</span></p>
+                </Link>
+            </div>
         </div>
-    </div>
-    
+
     )
 }
 
