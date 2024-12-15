@@ -8,6 +8,13 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+  
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0a0a0a !important; /* Принудительное применение */
+    color: #ededed !important; /* Принудительное применение */
+  }
 }
 
 html,
