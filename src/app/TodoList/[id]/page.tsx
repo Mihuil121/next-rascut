@@ -24,9 +24,11 @@ const EventDetail: React.FC = () => {
       if (id) {
         try {
           const events: IEvent[] = await fetchEvents(); 
-          const eventIndex = Number(id);
-          if (eventIndex >= 0 && eventIndex < events.length) {
-            setEvent(events[eventIndex]); 
+          const eventId = Number(id); // Преобразуем id в число
+          const foundEvent = events.find(event => event.id === eventId); // Ищем событие по ID
+          
+          if (foundEvent) {
+            setEvent(foundEvent); 
           } else {
             console.error('Событие не найдено');
           }
@@ -73,9 +75,6 @@ const EventDetail: React.FC = () => {
       </div>
     </div>
   );
-  
-  
 };
 
 export default EventDetail;
-
