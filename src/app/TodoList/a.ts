@@ -11,7 +11,7 @@ export interface IEvent {
 // Функция для получения событий
 export const fetchEvents = async (): Promise<IEvent[]> => {
     try {
-        const response = await axios.get('http://poezd.data92.ru/api/quests');
+        const response = await axios.get('https://poezd.data92.ru/api/quests');
         
         // Логируем весь ответ для проверки
         console.log(response);
