@@ -19,7 +19,7 @@ const Cap: React.FC = () => {
                 <Link href='/'>
                     <p className={quando.className}><AiFillHome /><span>Главная</span></p>
                 </Link>
-                <Link href='./'>
+                <Link href='https://web.webar-studio.com/v2/0357989749/'>
                     <p className={quando.className}><SiCinema4D /><span>AR</span></p>
                 </Link>
                 <Link href='/instructions'>

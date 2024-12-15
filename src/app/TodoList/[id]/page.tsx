@@ -49,7 +49,7 @@ const EventDetail: React.FC = () => {
        
         <h1 className="event-title">{event.title}</h1>
         <p className="event-description">{event.description}</p>
-        <Link href='/'>
+        <Link href='https://web.webar-studio.com/v2/0357989749/'>
           <button
             className={`quest-button ${isHovered ? 'hovered' : ''}`}
             onMouseEnter={() => setIsHovered(true)}
