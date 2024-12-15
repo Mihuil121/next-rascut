@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { IEvent, fetchEvents } from './a'; 
@@ -23,7 +23,8 @@ const TodoList: React.FC = () => {
     loadEvents();
   }, []);
 
-  const handleDelete = (index: number) => {
+  const handleDelete = (index: number, event: React.MouseEvent) => {
+    event.stopPropagation(); // Остановить всплытие события
     const updatedTodos = todos.filter((_, i) => i !== index);
     setTodos(updatedTodos);
     localStorage.setItem('todos', JSON.stringify(updatedTodos));
@@ -52,17 +53,17 @@ const TodoList: React.FC = () => {
 
       <ul className="todoList">
         {todos.map((event, index) => (
-          <Link key={event.id} href={`./TodoList/${event.id}`}>
-            <li className="todoItem fade-in">
+          <li key={event.id} className="todoItem fade-in">
+            <Link href={`./TodoList/${event.id}`}>
               {event.title}
-              <span 
-                onClick={() => handleDelete(index)} 
-                className="deleteButton"
-              >
-                ✖
-              </span>
-            </li>
-          </Link>
+            </Link>
+            <span 
+              onClick={(e) => handleDelete(index, e)} 
+              className="deleteButton"
+            >
+              ✖
+            </span>
+          </li>
         ))}
       </ul>
     </div>

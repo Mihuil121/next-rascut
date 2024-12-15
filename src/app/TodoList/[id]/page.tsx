@@ -46,7 +46,6 @@ const EventDetail: React.FC = () => {
   return (
     <div className="Image-events">
       <div className="event-container">
-       
         <h1 className="event-title">{event.title}</h1>
         <p className="event-description">{event.description}</p>
         <Link href='https://web.webar-studio.com/v2/0357989749/'>
@@ -61,19 +60,22 @@ const EventDetail: React.FC = () => {
           </button>
         </Link>
       </div>
-      <div className="">
-          {event.images && (
-            <Image
-              src={event.images}
-              alt={event.title}
-              layout="responsive" 
-              width={700}
-              height={500} 
-            />
-          )}
-        </div>
+      <div className="image-gallery">
+        {event.images && event.images.length > 0 && (
+          <Image
+            src={event.images[0]}
+            alt={event.title}
+            layout="responsive" 
+            width={700}
+            height={500} 
+          />
+        )}
+      </div>
     </div>
   );
+  
+  
 };
 
 export default EventDetail;
+

@@ -1,28 +1,19 @@
 .Image-events {
   display: flex;
-
-}
-
-.Image-events-i img {
-  width: 100%;
-  height: 100%;
+  height: 100vh; /* Полная высота экрана */
 }
 
 .event-container {
-  margin: 0;
+  flex: 1; /* Занимает оставшееся пространство */
   font-family: 'Arial', sans-serif;
   background-color: #121212;
   color: #ffffff;
   transition: background-color 0.3s ease;
-  height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  max-width: 800px;
-  width: 100%;
-  animation: fadeInEffect 0.5s ease;
+  justify-content: center; /* Центрирование содержимого по вертикали */
+  max-width: 600px; /* Максимальная ширина для контейнера события */
 }
 
 .event-title {
@@ -34,27 +25,23 @@
 .event-description {
   font-size: 1.2rem;
   line-height: 1.5;
-  text-align: center;
+  text-align: left; /* Выравнивание текста влево */
   margin-bottom: 20px;
 }
 
-.image-wrapper {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+.image-gallery {
+  flex: 1; /* Занимает оставшееся пространство */
+  display: flex;
+  justify-content: center; /* Центрирование изображения */
+  align-items: center; /* Центрирование изображения по вертикали */
+  padding: 20px; /* Отступы вокруг изображения */
 }
 
-.image-wrapper img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.image-wrapper img:hover {
-  transform: scale(1.05);
+.image-gallery img {
+  max-width: 100%; /* Обеспечивает отзывчивость изображения */
+  height: auto; /* Сохраняет пропорции */
+  border-radius: 10px; /* Закругление углов изображения */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для изображения */
 }
 
 @keyframes fadeInEffect {
@@ -73,22 +60,6 @@
 
   .event-description {
     font-size: 1rem;
-  }
-}
-.Image-events {
-  display: flex;
-}
-
-.Image-events-i {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
