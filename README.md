@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Next-rascut
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Описание проекта
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Проект был выполнен командой в течение 3 дней для участия в IT-Fest. Мы разработали веб-приложение с использованием технологий дополненной реальности (AR), которое позволяет пользователям наводить свои устройства на исторические объекты и получать текстовую информацию о них.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Цели и задачи
 
-## Learn More
+1. **Цель**: Привлечь внимание широкой аудитории к историческому наследию нашей страны.
+2. **Задача**: Воссоздать техническое и удобное решение для улучшения работы автопоезда.
 
-To learn more about Next.js, take a look at the following resources:
+## Целевая аудитория
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Жители и гости городов, которые желают познакомиться с историей.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Технологии
 
-## Deploy on Vercel
+- **Frontend**: Веб-приложение построено с использованием **Next.js** и **TypeScript**. Мы интегрировали AR функционал с помощью **8th Wall Studio**.
+- **Backend**: В настоящее время backend-часть находится в разработке на платформе LeetCode и будет интегрирована в будущем.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Программное обеспечение для управления мультимедийным контентом
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Ruscut Админ панель**
+
+## Функционал
+
+1. **AR-WEB приложение**: Разработка специального приложения для устройств.
+2. **Интерактивный контент**: 3D-модели, аудиогид, AR-квесты.
+3. **Визуализация**: Использование виртуальных объектов, AR-квестов.
+
+## Инновационные технические решения
+
+1. **AR-экспозиции**: Использование AR-технологий для представления экспонатов.
+2. **Игры с элементами AR**: Игровая форма повествования истории.
+
+## Удобство использования и доступность
+
+1. **Мобильность**: Уникальное сочетание WEB приложения и AR-технологий.
+2. **Удобные инструменты**: Удобные инструменты для создания новых квестов и экспозиций.
+3. **Интуитивно понятный интерфейс**: Мы стремились создать удобный интерфейс, который адаптируется под каждое устройство.
+
+## Результаты проекта
+
+1. **Админ панель**: Ruscut
+2. **Ресурс с AR-WEB технологиями**
+3. **AR-WEB приложение**
+4. **Telegram бот для помощи**
+
+## Установка и запуск
+
+1. Склонируйте репозиторий:
+   ```bash
+   git clone [URL вашего репозитория]
+   ```
+2. Перейдите в директорию проекта:
+   ```bash
+   cd имя-проекта
+   ```
+3. Установите зависимости:
+   ```bash
+   npm install
+   ```
+4. Запустите проект:
+   ```bash
+   npm run dev
+   ```
+5. Откройте `http://localhost:3000` в вашем браузере для запуска фронтенд части приложения.
+
+## Авторы
+
+- Юсупов Эмиль
+- Романченко Максим
+- Безуглый Михаил
+- Ибатуллин Хадис
+- Кальченко Тимофей
+
+---
+
